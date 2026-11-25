@@ -1,1 +1,11 @@
-
+{
+  "posts": [
+    {
+      "category": "Pengumuman",
+      "summary": "Website ini menjadi tempat informasi kegiatan, opini kader, dan pengumuman komisariat.",
+      "body": "Mulai hari ini, informasi kegiatan dan gagasan kader PMII Komisariat Raden Intan dapat dibaca di website ini. Tunggu kabar dan tulisan terbaru dari kami.",
+      "title": "Website resmi PMII Komisariat Raden Intan kini hadir",
+      "date": "2026-11-25"
+    }
+  ]
+}
