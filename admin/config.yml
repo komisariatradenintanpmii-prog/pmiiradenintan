@@ -1,1 +1,31 @@
+backend:
+  name: github
+  repo: komisariatradenintanpmii-prog/pmiiradenintan
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
+locale: id
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: situs
+    label: Konten Website
+    files:
+      - name: posts
+        label: Tulisan dan Kabar Terbaru
+        file: content/posts.json
+        fields:
+          - label: Daftar Tulisan
+            name: posts
+            widget: list
+            label_singular: Tulisan
+            summary: "{{fields.date}} | {{fields.title}}"
+            fields:
+              - { label: Judul, name: title, widget: string }
+              - { label: Kategori, name: category, widget: select, options: ["Kegiatan", "Opini", "Pengumuman"] }
+              - { label: Tanggal, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: Ringkasan (tampil di kartu), name: summary, widget: text }
+              - { label: Isi Lengkap, name: body, widget: text }
+              - { label: Foto (opsional), name: image, widget: image, required: false }
